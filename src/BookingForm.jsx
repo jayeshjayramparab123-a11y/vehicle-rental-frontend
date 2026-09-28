@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import axios from "axios";
 import "./BookingForm.css";
 
-const API = "http://localhost:5000";
+const API = "https://vehicle-rental-backend-gmwo.onrender.com";
 
 function BookingForm({ vehicle, onBack, onSuccess }) {
   const [form, setForm] = useState({

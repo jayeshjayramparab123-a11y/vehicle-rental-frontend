@@ -118,7 +118,7 @@ function App() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/api/vehicles")
+      .get("https://vehicle-rental-backend-gmwo.onrender.com/api/vehicles")
       .then((response) => {
 
         console.log("VEHICLES:", response.data);
@@ -148,7 +148,7 @@ function App() {
       const loginEmail = email.trim().toLowerCase();
 
       const response = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://vehicle-rental-backend-gmwo.onrender.com/api/users/login",
         {
           email: loginEmail,
           password: password
@@ -323,7 +323,7 @@ function App() {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://vehicle-rental-backend-gmwo.onrender.com/api/users/register",
         registerData
       );
 
@@ -442,7 +442,7 @@ function App() {
 
 
       const response = await axios.post(
-        "http://localhost:5000/api/users/verify-email",
+        "https://vehicle-rental-backend-gmwo.onrender.com/api/users/verify-email",
         {
           email: verificationEmail,
           otp: otp
@@ -530,7 +530,7 @@ function App() {
 
 
       const response = await axios.post(
-        "http://localhost:5000/api/users/resend-otp",
+        "https://vehicle-rental-backend-gmwo.onrender.com/api/users/resend-otp",
         {
           email: verificationEmail
         }
@@ -603,7 +603,7 @@ function App() {
 
 
       const response = await axios.post(
-        "http://localhost:5000/api/payments",
+        "https://vehicle-rental-backend-gmwo.onrender.com/api/payments",
         {
           bookingId:
             currentBooking._id,
@@ -679,7 +679,7 @@ function App() {
 
       const response =
         await axios.get(
-          `http://localhost:5000/api/bookings/user/${userId}`
+          `https://vehicle-rental-backend-gmwo.onrender.com/api/bookings/user/${userId}`
         );
 
 
@@ -757,7 +757,7 @@ function App() {
 
           if (userId) {
             axios
-              .get(`http://localhost:5000/api/bookings/user/${userId}`)
+              .get(`https://vehicle-rental-backend-gmwo.onrender.com/api/bookings/user/${userId}`)
               .then((response) => {
                 setMyBookings(response.data || []);
               })

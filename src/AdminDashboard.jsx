@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import "./AdminDashboard.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://vehicle-rental-backend-gmwo.onrender.com/api";
 
 const emptyVehicle = {
   vehicleName: "",

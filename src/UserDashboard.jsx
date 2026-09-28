@@ -3,7 +3,7 @@ import axios from "axios";
 import "./UserDashboard.css";
 import BookingForm from "./BookingForm";
 
-const API = "http://localhost:5000";
+const API = "https://vehicle-rental-backend-gmwo.onrender.com";
 
 function UserDashboard({ onLogout }) {
   const userId = localStorage.getItem("userId");
